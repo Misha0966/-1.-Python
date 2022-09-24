@@ -1,9 +1,9 @@
-def logical_statement(x, y, z):
-   print(f"¬({x} ⋁ {y} ⋁ {z}) = ¬{x} ⋀ ¬{y} ⋀ ¬{z} is {(not (x or y or z)) == (not x and not y and not z)}")
-   return (not (x or y or z)) == (not x and not y and not z)
-if (logical_statement(0, 0, 0) and logical_statement(0, 0, 1) and logical_statement(0, 1, 0) and 
-logical_statement(0, 1, 1) and logical_statement(1, 0, 0) and logical_statement(1, 0, 1) and
-logical_statement(1, 1, 0) and logical_statement(1, 1, 1)):
-     print("Истинное")
-else:
-     print("Ложное")
+def logical_statement(x, y, z): # задаём функцию логического утверждания, для x, y, z, являющиемся значениями предикат
+     print(f"¬({x} ⋁ {y} ⋁ {z}) = ¬{x} ⋀ ¬{y} ⋀ ¬{z} is {(not (x or y or z)) == (not x and not y and not z)}") # выводим сравнение двух условий, при которых ¬({x} ⋁ {y} ⋁ {z}) = ¬{x} ⋀ ¬{y} ⋀ ¬{z} является cравнением на равенство другого условия, в котором не х или не y или не z равно ли не x и не y и не z
+     return (not (x or y or z)) == (not x and not y and not z) # возврат проверки на равенство двух утверждений, где не х или не y или не z равно ли не x и не y и не z
+if (logical_statement(0, 0, 0) and logical_statement(0, 0, 1) and logical_statement(0, 1, 0) and # если логическое утверждение, в котором значения для x, y, z ложные и логическое утверждение, в котором истинно только значение z и логическое утверждение в котором истинно только y
+logical_statement(0, 1, 1) and logical_statement(1, 0, 0) and logical_statement(1, 0, 1) and # и логическое утверждение, в котором истинны только y, z и логическое утверждение, в которм истинно только x и логическое утверждение в котором истинно только x,z  
+logical_statement(1, 1, 0) and logical_statement(1, 1, 1)): # и логическое утверждение в котором истинны только x, y и логическое утверждение ув которм истинны все переменные, то тогда
+     print("Истинное") # ввывод на экран сообщения о том, что утверждение является истинным
+else: # иначе
+     print("Ложное") # ввывод на экран сообщения о том, что утверждение является ложным
